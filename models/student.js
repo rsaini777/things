@@ -18,7 +18,6 @@ const UserSchema = new mongoose.Schema(
     },
     society: {
       type:String,
-      default:null,
     },
 
     year: {

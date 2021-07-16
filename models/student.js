@@ -16,7 +16,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    society: [],
+    society: {
+      type:String,
+      default:null,
+    },
 
     year: {
       type: Number,

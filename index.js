@@ -27,9 +27,6 @@ connection.once("open", () => {
 const studentroute = require("./routes/student");
 app.use("/api", studentroute);
 
-const societyroute = require("./routes/society");
-app.use("/api", societyroute);
-
 const subjectsroute = require("./routes/subjects");
 app.use("/api", subjectsroute);
 

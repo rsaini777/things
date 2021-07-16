@@ -3,7 +3,7 @@ const axios = require("axios");
 const controller = {
   data: async (req, res) => {
     try {
-      const { name, contact, classes, year } = req.body;
+      const { name, contact, classes,society, year } = req.body;
 
       await axios({
         method: "get",
@@ -15,16 +15,7 @@ const controller = {
         .catch((e) => {
           console.log(e);
         });
-      await axios({
-        method: "get",
-        url: "http://localhost:7000/api/society",
-      })
-        .then((result) => {
-          society = result.data;
-        })
-        .catch((e) => {
-          console.log(e);
-        });
+       
 
       const student = new Student({
         name,
